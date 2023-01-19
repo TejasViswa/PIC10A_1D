@@ -97,8 +97,8 @@ int main(){
   t1m = t1 % 100; // time1 minutes
   t2m = t2 % 100; // time2 minutes
   
-  t1tm = (t1 * 60) + t1m; // time1 total time in minutes
-  t2tm = (t2 * 60) + t2m; // time2 total time in minutes
+  t1tm = (t1h * 60) + t1m; // time1 total time in minutes
+  t2tm = (t2h * 60) + t2m; // time2 total time in minutes
   
   tdtm = t2tm - t1tm; // total difference time in minutes
   
