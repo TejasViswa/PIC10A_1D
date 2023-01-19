@@ -85,7 +85,7 @@ using namespace std;
 int main(){
   
 	int t1, t2, t1h, t2h, t1m, t2m, t1tm, t2tm, tdtm, hours, minutes;
-  
+
 	cout << "Please enter the first time:";
 	cin >> t1;
 	cout << "Please enter the second time:";
@@ -107,6 +107,6 @@ int main(){
 
 	cout << hours << " hours " << minutes << " minutes";
 
-  	return 0;
+	return 0;
 }
 ```
