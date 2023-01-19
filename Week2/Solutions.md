@@ -84,29 +84,29 @@ using namespace std;
 
 int main(){
   
-  int t1, t2, t1h, t2h, t1m, t2m, t1tm, t2tm, tdtm, hours, minutes;
+	int t1, t2, t1h, t2h, t1m, t2m, t1tm, t2tm, tdtm, hours, minutes;
   
 	cout << "Please enter the first time:";
 	cin >> t1;
 	cout << "Please enter the second time:";
 	cin >> t2;
-  
+
 	t1h = t1 / 100; // time1 hours
 	t2h = t2 / 100; // time2 hours
-  
-  t1m = t1 % 100; // time1 minutes
-  t2m = t2 % 100; // time2 minutes
-  
-  t1tm = (t1h * 60) + t1m; // time1 total time in minutes
-  t2tm = (t2h * 60) + t2m; // time2 total time in minutes
-  
-  tdtm = t2tm - t1tm; // total difference time in minutes
-  
-  hours = tdtm / 60;
-  minutes = tdtm % 60;
-  
+
+	t1m = t1 % 100; // time1 minutes
+	t2m = t2 % 100; // time2 minutes
+
+	t1tm = (t1h * 60) + t1m; // time1 total time in minutes
+	t2tm = (t2h * 60) + t2m; // time2 total time in minutes
+
+	tdtm = t2tm - t1tm; // total difference time in minutes
+
+	hours = tdtm / 60;
+	minutes = tdtm % 60;
+
 	cout << hours << " hours " << minutes << " minutes";
 
-  return 0;
+  	return 0;
 }
 ```
