@@ -59,6 +59,33 @@ Write a program that asks the user to enter a month (1 for January, 2 for Februa
 Enter a month: 5
 30 days
 ```
+#### Note: Please note that you can can also initially solve this question with nested if statements and then condense into the below form
+### Solution
+```c++
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int x;
+    cout<<"Please enter the month (in number) : ";
+    cin>>x;
+    if(x==2)
+    {
+        cout<<"It has 28/29 days"<<endl;
+    }
+    else if(( x<8 && x%2==1 ) || (x>=8 && x%2==0))
+    {
+        cout<<"It has 31 days"<<endl;
+    }
+    else
+    {
+        cout<<"It has 30 days"<<endl;
+    }
+    
+    return 0;
+}
+```
 
 ## Question 3
 
