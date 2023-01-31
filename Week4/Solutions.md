@@ -15,6 +15,7 @@ Enter a month: 5
 ## Question 3
 
 Write a program that takes user input describing a playing card in the following shorthand notation:
+```
 A         - Ace
 2 ... 10  - Card Values
 J         - Jack
@@ -24,6 +25,7 @@ D         - Diamond
 H         - Hearts
 S         - Spades
 C         - Clubs
+```
 Your program should print the full description of the card. For example,
 ```
 Enter the card notation: QS
