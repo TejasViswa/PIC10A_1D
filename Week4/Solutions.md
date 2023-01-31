@@ -106,3 +106,62 @@ Your program should print the full description of the card. For example,
 Enter the card notation: QS
 Queen of spades
 ```
+### Solution
+```c++
+#include <string.h>
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    string s,s1;
+    cout<<"Please enter the input card (in shorthand) : ";
+    cin>>s;
+    if(s[1]=='0')
+    {
+        cout<<"10";
+    }
+    else if(s[0]>='1'&&s[0]<='9')
+    {
+        cout<<s[0];
+    }
+    else
+    {
+        switch(s[0])
+        {
+            case 'A':
+            case 'a': cout<<"Ace";
+                break;
+            case 'K':
+            case 'k': cout<<"King";
+                break;
+            case 'Q':
+            case 'q': cout<<"Queen";
+                break;
+            case 'J':
+            case 'j': cout<<"Jack";
+                break;
+        }
+        
+    }
+    cout<<" of ";
+    char s2 = s[s.length()-1];
+    switch(s2)
+    {
+        case 'D':
+        case 'd': cout<<"Diamond";
+            break;
+        case 'H':
+        case 'h': cout<<"Hearts";
+            break;
+        case 'S':
+        case 's': cout<<"Spades";
+            break;
+        case 'C':
+        case 'c': cout<<"Clover";
+            break;
+    }
+    
+    return 0;
+}
+```
