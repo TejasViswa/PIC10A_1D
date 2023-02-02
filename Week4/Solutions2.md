@@ -53,13 +53,13 @@ int main() {
 }
 ```
 ## Question 2:
-Write a program to enter a sequence of integers and find their sum.
+Write a program to enter a sequence of non-negative integers and find their sum. The sequence of inputs gets terminated when the user enters -1.
 ```
-Input(Enter -1 to quit): 1 2 1 8 8 9 K 
+Input(Enter -1 to quit): 1 2 1 8 8 9 -1
 Output: 29
 ```
 ```
-Input(Enter -1 to quit): 1 K 
+Input(Enter -1 to quit): 1 -1 
 Output: 1
 ```
 ### Solution
@@ -69,15 +69,15 @@ You can use a while loop to keep checking if K was entered
 using namespace std;
 int main()
 {
-  int x = 0, sum = 0;
-  cout<<"Input(Enter -1 to quit): ";
-  while(x!=-1)
-  {
-    cin>>x>>endl;
-    sum+=x;
-  }
-  cout<<"Output: "<<sum;
-  return 0;
+    int x = 0, sum = 0;
+    cout<<"Input(Enter -1 to quit): ";
+    while(x!=-1)
+    {
+        sum+=x;
+        cin>>x;
+    }
+    cout<<"\nOutput: "<<sum;
+    return 0;
 }
 ```
 
