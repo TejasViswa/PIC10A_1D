@@ -105,23 +105,32 @@ int main()
 ## Question 3:
 Print the following pattern:
 ```
-1
-2
-3
-4
+* * *
+$ $ $
+* * *
+$ $ $
+* * *
+$ $ $
 ```
 ### Solution
-To print the above pattern, a simple for loop with n=4 is sufficient:
+To print the above pattern, a simple for loop with n=6 is sufficient:
 ```c++
 #include <iostream>
 using namespace std;
 int main()
 {
-  int n = 4;
-  for(int i = 1; i <= n; i++)
-  {
-    cout<<i<<endl;
-  }
+    int n = 6;
+    for(int i = 1; i <= n; i++)
+    {
+        if(i%2==1)
+        {
+            cout<<"* * *"<<endl;
+        }
+        else
+        {
+            cout<<"$ $ $"<<endl;
+        }
+    }
   
   return 0;
 }
