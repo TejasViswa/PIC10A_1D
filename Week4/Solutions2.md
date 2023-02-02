@@ -81,7 +81,7 @@ int main()
 }
 ```
 
-## Question 2:
+## Question 3:
 Print the following pattern:
 ```
 1
