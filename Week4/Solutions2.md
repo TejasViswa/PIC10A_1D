@@ -63,7 +63,7 @@ Input(Enter -1 to quit): 1 -1
 Output: 1
 ```
 ### Solution
-You can use a while loop to keep checking if K was entered
+You can use a while loop to keep checking if -1 was entered
 ```c++
 #include <iostream>
 using namespace std;
