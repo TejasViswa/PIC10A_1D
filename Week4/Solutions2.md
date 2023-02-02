@@ -53,14 +53,18 @@ int main() {
 }
 ```
 ## Question 2:
-Write a program to enter a sequence of non-negative integers and find their sum. The sequence of inputs gets terminated when the user enters -1.
+Write a program to enter a sequence of non-negative integers and find their sum and print if the sum is a multiple of 3, 5 or both. The sequence of inputs gets terminated when the user enters -1.
 ```
 Input(Enter -1 to quit): 1 2 1 8 8 9 -1
-Output: 29
+Output: 29 is neither a multiple of 3 nor 5
 ```
 ```
-Input(Enter -1 to quit): 1 -1 
-Output: 1
+Input(Enter -1 to quit): 7 8 -1 
+Output: 15 is multiple of both 3 and 5
+```
+```
+Input(Enter -1 to quit): 2 1 3 -1 
+Output: 6 is multiple of 3
 ```
 ### Solution
 You can use a while loop to keep checking if -1 was entered
@@ -77,6 +81,23 @@ int main()
         cin>>x;
     }
     cout<<"\nOutput: "<<sum;
+    
+    if( sum % 3 == 0 && sum % 5 == 0 )
+    {
+        cout<<" is a multiple of both 3 and 5"
+    }
+    else if( sum % 3 == 0 )
+    {
+        cout<<" is a multiple of 3"
+    }
+    else if( sum % 5 == 0 )
+    {
+        cout<<" is a multiple of 5"
+    }
+    else
+    {
+        cout<<" is neither a multiple of 3 nor 5"
+    }
     return 0;
 }
 ```
