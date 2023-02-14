@@ -24,16 +24,44 @@ Enter the character to create the square with: &
 ```
 
 ## Question 2
-An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371.
-Write a program to find all Armstrong number in the range of 0 and 999 using a function with input parameter as 999.
+An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371. Other examples: 0,1,153,370,371,407,etc
+Write a program to check if a given number is an armstrong number.
 ```
-Enter the limit of the range: 999
+Please enter an integer: 371
+It is an armstrong number
+```
+### Solution
+```c++
+#include <iostream>
+using namespace std;
 
-Following are the Armstrong numbers within 999:
-0
-1
-153
-370
-371
-407
+bool isArmstrong(int num)
+{
+    int originalNum = num, rem = 0, result = 0;
+    
+    while (originalNum != 0) {
+        // rem contains the last digit
+        rem = originalNum % 10;
+        
+        result += rem * rem * rem;
+        
+        // removing last digit from the orignal number
+        originalNum /= 10;
+    }
+    
+    return (result==num);
+}
+
+int main() {
+    int num, originalNum, remainder, result = 0;
+    cout << "Enter a three-digit integer: ";
+    cin >> num;
+
+    if (isArmstrong(num))
+        cout << num << " is an Armstrong number.";
+    else
+        cout << num << " is not an Armstrong number.";
+
+    return 0;
+}
 ```
