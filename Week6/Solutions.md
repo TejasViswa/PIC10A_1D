@@ -63,7 +63,7 @@ An Armstrong number of three digits is an integer such that the sum of the cubes
 Write a program to check if a given number is an armstrong number.
 ```
 Please enter an integer: 371
-It is an armstrong number
+371 is an armstrong number
 ```
 ### Solution
 ```c++
