@@ -22,6 +22,41 @@ Enter the character to create the square with: &
 & & &
 
 ```
+### Solution
+```c++
+#include <iostream>
+using namespace std;
+
+void drawSquare(int size, char c)
+{
+    for(int i=1; i<=size; i++)
+    {
+        for(int j=1; j<=size; j++)
+        {
+            if(i==1 || i==size)
+                cout<<c<<' ';
+            else if(j==1 || j==size)
+                cout<<c<<' ';
+            else
+                cout<<"  ";
+        }
+        cout<<endl;
+    }
+}
+
+int main() {
+    int size;
+    char c;
+    cout << "Enter the size of square: ";
+    cin>>size;
+    cout << "Enter the character to create the square with: ";
+    cin>>c;
+    
+    drawSquare(size,c);
+
+    return 0;
+}
+```
 
 ## Question 2
 An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself. For example, 371 is an Armstrong number since 3**3 + 7**3 + 1**3 = 371. Other examples: 0,1,153,370,371,407,etc
