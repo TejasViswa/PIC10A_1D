@@ -53,7 +53,7 @@ bool isArmstrong(int num)
 }
 
 int main() {
-    int num, originalNum, remainder, result = 0;
+    int num;
     cout << "Enter a three-digit integer: ";
     cin >> num;
 
@@ -61,6 +61,41 @@ int main() {
         cout << num << " is an Armstrong number.";
     else
         cout << num << " is not an Armstrong number.";
+
+    return 0;
+}
+```
+An extension of the above problem is to print all 3-digit armstrong numbers.
+### Solution
+```c++
+#include <iostream>
+using namespace std;
+
+bool isArmstrong(int num)
+{
+    int originalNum = num, rem = 0, result = 0;
+    
+    while (originalNum != 0) {
+        // rem contains the last digit
+        rem = originalNum % 10;
+        
+        result += rem * rem * rem;
+        
+        // removing last digit from the orignal number
+        originalNum /= 10;
+    }
+    
+    return (result==num);
+}
+
+int main() {
+    cout << "The 3 digit armstrong numbers are:"<<endl;
+    
+    for(int i=0; i<=999; i++)
+    {
+        if (isArmstrong(i))
+            cout << i <<endl;
+    }
 
     return 0;
 }
